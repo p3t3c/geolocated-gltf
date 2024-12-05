@@ -10,7 +10,7 @@ import "./css/main.css";
 import * as Cesium from "cesium";
 
 
-Cesium.Ion.defaultAccessToken = "YOURS_GOES_HERE";
+Cesium.Ion.defaultAccessToken = "YOURS GOES HERE";
 
 
 const viewer = new Viewer("cesiumContainer", {
@@ -20,7 +20,6 @@ const viewer = new Viewer("cesiumContainer", {
 
 try {
     const modelFilePath = "http://localhost:8081/Assets/geobox.gltf"
-    // const modelFilePath = "/Assets/box.gltf"
     let modelFromGltfIM = await Cesium.Model.fromGltfAsync({
         url: modelFilePath, 
         scale: 1,
@@ -29,6 +28,8 @@ try {
         // enableDebugWireframe: true,
         // debugWireframe: true,
     });
+
+    let modelFromGltfIMReference = viewer.scene.primitives.add(modelFromGltfIM);
 } catch (error) {
     console.log(`Failed to load model. ${error}`);
 }
@@ -37,7 +38,7 @@ try {
 // viewer.trackedEntity = geobox;
 
 viewer.camera.flyTo({
-    destination: Cartesian3.fromDegrees(-0, -0, 5000),
+    destination: Cartesian3.fromDegrees(0.0, 0.0, 10000),
     // destination: convertCoords,
     orientation: {
         heading: Math.toRadians(0.0),
