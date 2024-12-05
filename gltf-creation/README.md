@@ -13,7 +13,7 @@ Recreate the environment from the exported file:
 conda env create -f environment.yml
 ```
 
-## Update Environement
+## Update Environment
 
 This command updates the environment based on changes in the environment.yml file and removes unnecessary packages
 ```bash
