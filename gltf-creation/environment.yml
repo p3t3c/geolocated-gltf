@@ -3,26 +3,27 @@ channels:
   - defaults
 dependencies:
   - python=3.11
+  - notebook
+  - pyproj=3.6.1
   - pip:
-      - certifi
       - charset-normalizer
       - contourpy
       - cycler
       - fonttools
       - idna
+      - karney
       - kiwisolver
       - matplotlib
       - numpy
+      - nvector
       - packaging
       - pillow
       - platformdirs
       - pooch
       - pyparsing
-      - python-dateutil
       - pyvista
-      - requests
+      - scipy
       - scooby
       - six
       - typing-extensions
-      - urllib3
       - vtk

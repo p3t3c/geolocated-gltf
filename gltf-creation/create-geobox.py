@@ -10,7 +10,7 @@ def create_geobox():
     :return:
     """
     # Reasonable approximation of earth radius.
-    earth_radius_metres = 6377172.0
+    earth_radius_metres = 6378237.0
     big_red_box = pv.Cube(center=(earth_radius_metres, 0, 0), x_length=500, y_length=2000, z_length=500, clean=False)
 
     pl = pv.Plotter()
